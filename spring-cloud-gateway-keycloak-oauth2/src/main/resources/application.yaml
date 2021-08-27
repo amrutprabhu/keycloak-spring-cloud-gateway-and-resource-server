@@ -1,4 +1,13 @@
 spring:
+#  cloud:
+#    gateway:
+#      default-filters:
+#        - TokenRelay
+#      routes:
+#        - id: resource-service
+#          uri: http://127.0.0.1:9191
+#          predicates:
+#            - Path=/page/**
   security:
     oauth2:
       client:
