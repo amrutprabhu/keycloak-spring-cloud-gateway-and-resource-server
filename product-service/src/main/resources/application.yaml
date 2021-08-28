@@ -1,0 +1,17 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/auth/realms/amrutrealm/protocol/openid-connect/certs
+logging:
+    level:
+      org:
+        springframework:
+          security:
+            web: DEBUG
+server:
+  port: 9191
+
+keycloak:
+  use-resource-role-mappings: true
