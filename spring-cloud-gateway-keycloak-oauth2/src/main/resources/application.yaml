@@ -1,13 +1,13 @@
 spring:
-#  cloud:
-#    gateway:
-#      default-filters:
-#        - TokenRelay
-#      routes:
-#        - id: resource-service
-#          uri: http://127.0.0.1:9191
-#          predicates:
-#            - Path=/page/**
+  cloud:
+    gateway:
+      default-filters:
+        - TokenRelay
+      routes:
+        - id: product-resource-server
+          uri: http://localhost:9191
+          predicates:
+            - Path=/product/**
   security:
     oauth2:
       client:
@@ -28,12 +28,12 @@ spring:
             redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
 
 # Enable these to debug the Authorization flow
-#logging:
-#    level:
-#      org:
-#        springframework:
-#          security:
-#            web: DEBUG
+logging:
+    level:
+      org:
+        springframework:
+          security:
+            web: DEBUG
 server:
   port: 9090
 
