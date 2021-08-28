@@ -1,6 +1,5 @@
 package com.amrut.prabhu.product;
 
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,10 +9,9 @@ import java.security.Principal;
 @RestController
 public class Controller {
 
-    @GetMapping("/page")
-    @RolesAllowed({"ROLE_realm_read"})
-//    @PreAuthorize("hasAuthority('ROLE_NOTHING')")
-    public String getPage(Principal principal){
-        return "value";
+    @GetMapping("/product")
+    @RolesAllowed({"product_read"})
+    public String getProduct(Principal principal) {
+        return "Response from Product Service, User Id:" + principal.getName();
     }
 }
