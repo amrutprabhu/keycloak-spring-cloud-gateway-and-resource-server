@@ -15,7 +15,6 @@
 	<description>Product service with Oauth2 integration as Resource Server</description>
 	<properties>
 		<java.version>16</java.version>
-		<keycloak.version>9.0.2</keycloak.version>
 	</properties>
 	<dependencies>
 		<dependency>
