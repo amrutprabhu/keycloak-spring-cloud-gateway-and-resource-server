@@ -1,4 +1,6 @@
 # Spring Cloud Gateway with Keycloak Integration using OAuth2 OpenId Connect (OIDC)
+<a href="https://foojay.io/works-with-openjdk"><img align="right" src="https://github.com/foojayio/badges/raw/main/works_with_openjdk/Works-with-OpenJDK.png" width="100"></a>
+
 
 In this project I am integrating Keycloak with spring cloud gateway as a client using Oauth2 OpenId Connect (OIDC).
 
