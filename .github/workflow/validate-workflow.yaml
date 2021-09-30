@@ -1,0 +1,25 @@
+name: 01 - Manually Bootstrap the CDK Environment
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    name: Validate
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK 16
+        uses: actions/setup-java@v1
+        with:
+          java-version: 16.0
+
+      - name: Verify product-service
+        run: mvn clean verify -f product-service-resource-server/pom.xml
+
+      - name: Verify keycloack-gateway-service
+        run: mvn clean verify -f spring-cloud-gateway-keycloak-oauth2/pom.xml
