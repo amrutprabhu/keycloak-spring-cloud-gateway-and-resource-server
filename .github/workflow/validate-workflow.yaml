@@ -2,8 +2,6 @@ name: 01 - Manually Bootstrap the CDK Environment
 
 on:
   push:
-    branches:
-      - '*'
   pull_request:
 
 jobs:
@@ -20,5 +18,8 @@ jobs:
         with:
           java-version: 16.0
 
-      - name: Build with Maven
-        run: cd product-service-resource-server & mvn clean verify
+      - name: Verify product-service
+        run: mvn clean verify -f product-service-resource-server/pom.xml
+
+      - name: Verify keycloack-gateway-service
+        run: mvn clean verify -f spring-cloud-gateway-keycloak-oauth2/pom.xml
