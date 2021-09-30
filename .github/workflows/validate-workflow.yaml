@@ -1,4 +1,4 @@
-name: 01 - Manually Bootstrap the CDK Environment
+name: CI
 
 on:
   push:
