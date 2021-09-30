@@ -2,6 +2,8 @@ name: 01 - Manually Bootstrap the CDK Environment
 
 on:
   push:
+    branches:
+      - '*'
   pull_request:
 
 jobs:
