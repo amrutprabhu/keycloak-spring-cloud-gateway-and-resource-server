@@ -40,5 +40,5 @@ org.springframework.security.web.server.savedrequest.WebSessionServerRequestCach
 Export Keyclock Config.
 
 ```shell
-docker exec -it 22dadc3be0dd  /opt/keycloak/bin/kc.sh export --dir /opt/keycloak/data/import --realm My-Realm
+docker exec -it 22dadc3be0dd  /opt/keycloak/bin/kc.sh export --dir /tmp/ --users realm_file --realm My-Realm
 ```
