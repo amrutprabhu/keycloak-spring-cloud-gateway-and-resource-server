@@ -36,3 +36,14 @@ org.springframework.boot.autoconfigure.security.oauth2.client.OAuth2ClientProper
 ```java
 org.springframework.security.web.server.savedrequest.WebSessionServerRequestCache.saveRequest
 ```
+
+Export Keyclock Config.
+
+```shell
+docker exec -it 22dadc3be0dd  /opt/keycloak/bin/kc.sh export --dir /tmp/ --users realm_file --realm My-Realm
+```
+Clients can trigger login with url : 
+
+```
+oauth2/authorization/keycloak-spring-gateway-client
+```
